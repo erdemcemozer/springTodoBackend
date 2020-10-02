@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.min.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body >
+
+<p>{{2+2}}</p>
+<hr/>
+
+<div ng-controller="getControl">
+    <button id="btn-id" type="button" class="btn btn-primary" ng-click="getfunction()">Get All Customers</button>
+    <ul>
+        <li ng-repeat="cust in response">{{cust.firstname + " " + cust.lastname}}</li>
+    </ul>
+</div>
+
+
+</body>
+</html>
