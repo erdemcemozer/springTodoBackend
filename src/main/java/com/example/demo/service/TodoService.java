@@ -11,13 +11,18 @@ import java.util.List;
 public class TodoService {
 
     @Autowired
-    private TodoRepository todoRepository;
+    private TodoRepository todoRepository; // To access repository.
 
-    public TodoList add(String subject){
-        return todoRepository.save(new TodoList(subject));
+    public TodoList add(TodoList todo){
+        return todoRepository.save(todo);
     }
 
     public List<TodoList> getAll(){
         return todoRepository.findAll();
+    }
+
+    public void deleteById(String id) {
+        todoRepository.deleteById(id);
+        System.out.println("test delete : " + id);
     }
 }
