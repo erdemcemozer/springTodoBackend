@@ -1,2 +1,3 @@
 # springTodoBackend
-You can access only backend here.
+
+Todo application backend with spring.
